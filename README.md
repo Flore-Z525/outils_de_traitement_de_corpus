@@ -2,26 +2,29 @@
 
 - la tâche à réaliser
 
-Image Classification
+Text Classification
 
 - un corpus qui répond à cette tâche: 
 
-le Datasets "Visual_Emotional_Analysis" : https://huggingface.co/datasets/FastJobs/Visual_Emotional_Analysis
+le Datasets "imdb" : 
+https://huggingface.co/datasets/imdb
 
 - à quel type de prédiction peut servir ce corpus
 
-donner les émotions des gens selon leurs images
+classifier les commentaires d'un film en classe positives et classe négative
 
 - à quel modèle il a servi
 
-emotion_classfication
+imdb-sentiment-analysis
 
 - Apprenez moi des choses sur un corpus
 
-Ce Dataset est en anglais. 
-8 classes ont été définies : anger(0), contempt(1), disgust(2), fear(3), happy(4), neutral(5), sad(6), surprise(7). 
+Ce Dataset est en anglais (monolingual). 
+2 classes ont été définies : neg(0), pos(1). 
 
 Size Categories : 10K < n < 100k
+
+Sub-tasks: sentiment-classification
 
 ## présentation de l'arborescence du repo
 PROJECT/
