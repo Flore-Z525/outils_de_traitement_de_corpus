@@ -25,22 +25,22 @@ Size Categories : 10K < n < 100k
 
 ## présentation de l'arborescence du repo
 PROJECT/
-├── bin/
+<br>├── bin/
 <- compiled binaries. 
-├── data/ 
-│   ├── raw/
-│   └── clean/
-│
-├── figures/        <- figures used in place of a "results" folder. 
-├── scripts/
-│   ├── process/    <- scripts to maniuplate data between raw, cleaned, final stages.
-│   └── plot/	      <- intermediate plotting.
-│
-├── src
-│   ├── model1/     <- various experimental models.
-│   ├── model2/
-│   └── model3/
-│
-├── LICENSE
-├── Makefile
-└── readme.md
+<br>├── data/ 
+<br>│   ├── raw/
+<br>│   └── clean/
+<br>│
+<br>├── figures/        <- figures used in place of a "results" folder. 
+<br>├── scripts/
+<br>│   ├── process/    <- scripts to maniuplate data between raw, cleaned, final stages.
+<br>│   └── plot/	      <- intermediate plotting.
+<br>│
+<br>├── src
+<br>│   ├── model1/     <- various experimental models.
+<br>│   ├── model2/
+<br>│   └── model3/
+<br>│
+<br>├── LICENSE
+<br>├── Makefile
+<br>└── readme.md
