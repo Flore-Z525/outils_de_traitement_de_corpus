@@ -22,3 +22,25 @@ Ce Dataset est en anglais.
 8 classes ont été définies : anger(0), contempt(1), disgust(2), fear(3), happy(4), neutral(5), sad(6), surprise(7). 
 
 Size Categories : 10K < n < 100k
+
+## présentation de l'arborescence du repo
+PROJECT/
+├── bin/
+<- compiled binaries. 
+├── data/ 
+│   ├── raw/
+│   └── clean/
+│
+├── figures/        <- figures used in place of a "results" folder. 
+├── scripts/
+│   ├── process/    <- scripts to maniuplate data between raw, cleaned, final stages.
+│   └── plot/	      <- intermediate plotting.
+│
+├── src
+│   ├── model1/     <- various experimental models.
+│   ├── model2/
+│   └── model3/
+│
+├── LICENSE
+├── Makefile
+└── readme.md
