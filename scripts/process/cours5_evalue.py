@@ -4,6 +4,11 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
 
+"""
+Cours 5.5
+Évaluer mon corpus avec les métriques
+"""
+
 df = pd.read_csv('../../data/clean/reviews_with_ratings.csv')
 
 df['classe'] = df['classe'].map({'positif': 1, 'negatif': 0})

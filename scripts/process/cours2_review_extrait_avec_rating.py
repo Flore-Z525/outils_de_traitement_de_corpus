@@ -3,6 +3,12 @@ from bs4 import BeautifulSoup
 import os
 import json
 
+"""
+Extraire les commentaires depuis les urls, avec leurs ratings. 
+Sauvegarder les commentaires et leurs ratings dans un fichier json 
+(pour faciliter plus tard la conversion en csv). 
+"""
+
 save_dir = os.path.abspath(os.path.join(os.getcwd(), "../../data/raw"))
 
 # Liste pour stocker tous les dictionnaires

@@ -1,6 +1,12 @@
 import pandas as pd
 from scipy.stats import spearmanr
 
+"""
+Cours 5.2
+
+Augmenter la p-value en éliminant les données abérrantes. 
+"""
+
 df = pd.read_csv('../../data/clean/reviews_with_ratings.csv')
 
 # Ajouter une colonne 'great_count' pour représenter le nombre d'occurrences du mot "great" dans chaque commentaire

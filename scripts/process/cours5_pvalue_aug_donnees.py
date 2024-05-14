@@ -2,6 +2,12 @@ import pandas as pd
 from scipy.stats import spearmanr
 import random
 
+"""
+Cours 5.3
+
+Augmenter les données en insérant, échangeant ou supprimant aléatoirement des mots. 
+"""
+
 df = pd.read_csv('../../data/clean/reviews_with_ratings.csv')
 
 # calculer le nombre d'occurrences de "great"
