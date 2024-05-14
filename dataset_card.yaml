@@ -1,0 +1,15 @@
+dataset_name: "IMDb reviews classification"
+creator: "ZHANG Yu"
+creation_date: "2024-04"
+
+description: |
+  Ce dataset classifie les critiques extraites d'IMDb en deux catégories : "negatif" (négatif) et "positif" (positif). 
+  Les critères de classification sont basés sur les notes attribuées à chaque critique sur le site Web. 
+  Les critiques notées de 0 à 5 sont classées comme "negatif", tandis que celles notées de 6 à 10 sont classées comme "positif".
+
+feature: 
+- commentaire
+
+classes: 
+- positif
+- negatif

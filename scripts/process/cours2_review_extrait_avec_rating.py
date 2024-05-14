@@ -4,7 +4,9 @@ import os
 import json
 
 save_dir = os.path.abspath(os.path.join(os.getcwd(), "../../data/raw"))
-all_dicos = []  # 用于存储所有dico的列表
+
+# Liste pour stocker tous les dictionnaires
+all_dicos = []
 
 urls = [
     "https://www.imdb.com/title/tt0411195/reviews?ref_=tt_urv",
@@ -18,30 +20,33 @@ for url in urls:
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
 
-    # 找到所有影评和评分
+    # Trouver tous les commentaires et leurs notes
     reviews_with_ratings = soup.find_all("div", class_="lister-item-content")
 
 
     for review_with_rating in reviews_with_ratings:
-        dico = {}  # 用于存储单个影评页面的dico
-        # 提取影评内容
+        # Dictionnaire pour stocker un commentaire individuel
+        dico = {}
+        # Extraction du contenu d'un commentaire
         review_text = review_with_rating.find("div", class_="text show-more__control"
                                                        or "text show-more__control clickable"
                                                        or "text show-more__control custom-cursor-on-hover")
         review = review_text.text
-        # 提取评分信息
+        # Extraction des informations de rating
         rating_tag = review_with_rating.find("span", class_="rating-other-user-rating")
         if rating_tag:
-            rating = rating_tag.find("span").text  # 假设每个评分标签下只有一个<span>包含数字
+            # On suppose qu'il n'y a qu'un seul <span> contenant les chiffres sous chaque balise de rating
+            rating = rating_tag.find("span").text
             dico[review] = rating
 
-            all_dicos.append(dico)  # 将当前页面的dico添加到总列表中
+            # Ajouter le dictionnaire du commentaire actuel à la liste globale
+            all_dicos.append(dico)
 
 # print(all_dicos)
 
-# 目标文件路径
+# Chemin du fichier cible
 file_path = os.path.join(save_dir, "reviews_with_ratings.json")
 
-# 写入JSON文件
+# Écrire le contenu de la liste 'all_dicos' dans le fichier JSON
 with open(file_path, "w", encoding="utf-8") as file:
     json.dump(all_dicos, file, indent=4, ensure_ascii=False)
